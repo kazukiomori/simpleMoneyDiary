@@ -133,7 +133,7 @@
         <!--ホーム-->
         <scene sceneID="aTi-8t-hEE">
             <objects>
-                <viewController id="Qzx-f7-oBF" sceneMemberID="viewController">
+                <viewController id="Qzx-f7-oBF" customClass="HomeViewController" customModule="simpleMoneyDiary" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="pAh-qG-do5">
                         <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>

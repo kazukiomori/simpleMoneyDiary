@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		29516202B15E406D8CD69EFF /* Pods_simpleMoneyDiary.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A11E020D662F811AA2E424B2 /* Pods_simpleMoneyDiary.framework */; };
+		37CED39BC7333A0CDA09FD70 /* Pods_simpleMoneyDiary_simpleMoneyDiaryUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8F0F187BF4A0C7617729DFBA /* Pods_simpleMoneyDiary_simpleMoneyDiaryUITests.framework */; };
 		3B963EB229A5797C00ED5046 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3B963EB129A5797C00ED5046 /* AppDelegate.swift */; };
 		3B963EB429A5797C00ED5046 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3B963EB329A5797C00ED5046 /* SceneDelegate.swift */; };
 		3B963EB629A5797C00ED5046 /* HomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3B963EB529A5797C00ED5046 /* HomeViewController.swift */; };
@@ -19,6 +21,7 @@
 		3BC8F5ED29A7035600C855C2 /* ExpenseInputViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3BC8F5EC29A7035600C855C2 /* ExpenseInputViewController.swift */; };
 		3BC8F5EF29A703B100C855C2 /* CalendarViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3BC8F5EE29A703B100C855C2 /* CalendarViewController.swift */; };
 		3BC8F5F129A703E500C855C2 /* SavingViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3BC8F5F029A703E500C855C2 /* SavingViewController.swift */; };
+		F112410E289C735B1A3DC435 /* Pods_simpleMoneyDiaryTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 88C9AC5F9D0159AE496993AC /* Pods_simpleMoneyDiaryTests.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -39,6 +42,8 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		24DF43D4E2E37013BAB9A0E0 /* Pods-simpleMoneyDiaryTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-simpleMoneyDiaryTests.release.xcconfig"; path = "Target Support Files/Pods-simpleMoneyDiaryTests/Pods-simpleMoneyDiaryTests.release.xcconfig"; sourceTree = "<group>"; };
+		3367A419C93132F0FF09234B /* Pods-simpleMoneyDiary-simpleMoneyDiaryUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-simpleMoneyDiary-simpleMoneyDiaryUITests.debug.xcconfig"; path = "Target Support Files/Pods-simpleMoneyDiary-simpleMoneyDiaryUITests/Pods-simpleMoneyDiary-simpleMoneyDiaryUITests.debug.xcconfig"; sourceTree = "<group>"; };
 		3B963EAE29A5797C00ED5046 /* simpleMoneyDiary.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = simpleMoneyDiary.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		3B963EB129A5797C00ED5046 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		3B963EB329A5797C00ED5046 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -55,6 +60,13 @@
 		3BC8F5EC29A7035600C855C2 /* ExpenseInputViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExpenseInputViewController.swift; sourceTree = "<group>"; };
 		3BC8F5EE29A703B100C855C2 /* CalendarViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CalendarViewController.swift; sourceTree = "<group>"; };
 		3BC8F5F029A703E500C855C2 /* SavingViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SavingViewController.swift; sourceTree = "<group>"; };
+		4DBE309903EAC5EB27092617 /* Pods-simpleMoneyDiaryTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-simpleMoneyDiaryTests.debug.xcconfig"; path = "Target Support Files/Pods-simpleMoneyDiaryTests/Pods-simpleMoneyDiaryTests.debug.xcconfig"; sourceTree = "<group>"; };
+		637878868869B15FE1D91A85 /* Pods-simpleMoneyDiary-simpleMoneyDiaryUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-simpleMoneyDiary-simpleMoneyDiaryUITests.release.xcconfig"; path = "Target Support Files/Pods-simpleMoneyDiary-simpleMoneyDiaryUITests/Pods-simpleMoneyDiary-simpleMoneyDiaryUITests.release.xcconfig"; sourceTree = "<group>"; };
+		7134C4F8B6FD97CA99B4A573 /* Pods-simpleMoneyDiary.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-simpleMoneyDiary.release.xcconfig"; path = "Target Support Files/Pods-simpleMoneyDiary/Pods-simpleMoneyDiary.release.xcconfig"; sourceTree = "<group>"; };
+		86F994B122395D4CDD867B33 /* Pods-simpleMoneyDiary.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-simpleMoneyDiary.debug.xcconfig"; path = "Target Support Files/Pods-simpleMoneyDiary/Pods-simpleMoneyDiary.debug.xcconfig"; sourceTree = "<group>"; };
+		88C9AC5F9D0159AE496993AC /* Pods_simpleMoneyDiaryTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_simpleMoneyDiaryTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		8F0F187BF4A0C7617729DFBA /* Pods_simpleMoneyDiary_simpleMoneyDiaryUITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_simpleMoneyDiary_simpleMoneyDiaryUITests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		A11E020D662F811AA2E424B2 /* Pods_simpleMoneyDiary.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_simpleMoneyDiary.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -62,6 +74,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				29516202B15E406D8CD69EFF /* Pods_simpleMoneyDiary.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -69,6 +82,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				F112410E289C735B1A3DC435 /* Pods_simpleMoneyDiaryTests.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -76,6 +90,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				37CED39BC7333A0CDA09FD70 /* Pods_simpleMoneyDiary_simpleMoneyDiaryUITests.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -89,6 +104,8 @@
 				3B963EC729A5798000ED5046 /* simpleMoneyDiaryTests */,
 				3B963ED129A5798000ED5046 /* simpleMoneyDiaryUITests */,
 				3B963EAF29A5797C00ED5046 /* Products */,
+				64C6764FEAC980EE9268CB7E /* Pods */,
+				DC7391242FB594A6DB710FBD /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -184,6 +201,30 @@
 			path = Common;
 			sourceTree = "<group>";
 		};
+		64C6764FEAC980EE9268CB7E /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				86F994B122395D4CDD867B33 /* Pods-simpleMoneyDiary.debug.xcconfig */,
+				7134C4F8B6FD97CA99B4A573 /* Pods-simpleMoneyDiary.release.xcconfig */,
+				3367A419C93132F0FF09234B /* Pods-simpleMoneyDiary-simpleMoneyDiaryUITests.debug.xcconfig */,
+				637878868869B15FE1D91A85 /* Pods-simpleMoneyDiary-simpleMoneyDiaryUITests.release.xcconfig */,
+				4DBE309903EAC5EB27092617 /* Pods-simpleMoneyDiaryTests.debug.xcconfig */,
+				24DF43D4E2E37013BAB9A0E0 /* Pods-simpleMoneyDiaryTests.release.xcconfig */,
+			);
+			name = Pods;
+			path = Pods;
+			sourceTree = "<group>";
+		};
+		DC7391242FB594A6DB710FBD /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				A11E020D662F811AA2E424B2 /* Pods_simpleMoneyDiary.framework */,
+				8F0F187BF4A0C7617729DFBA /* Pods_simpleMoneyDiary_simpleMoneyDiaryUITests.framework */,
+				88C9AC5F9D0159AE496993AC /* Pods_simpleMoneyDiaryTests.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -191,9 +232,11 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 3B963ED829A5798000ED5046 /* Build configuration list for PBXNativeTarget "simpleMoneyDiary" */;
 			buildPhases = (
+				9EEBDAFC8507D9AF90E59B5F /* [CP] Check Pods Manifest.lock */,
 				3B963EAA29A5797C00ED5046 /* Sources */,
 				3B963EAB29A5797C00ED5046 /* Frameworks */,
 				3B963EAC29A5797C00ED5046 /* Resources */,
+				C2A8EBF07E6B5E7A820AFE66 /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -208,6 +251,7 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 3B963EDB29A5798000ED5046 /* Build configuration list for PBXNativeTarget "simpleMoneyDiaryTests" */;
 			buildPhases = (
+				E7D8EC67F00A051616764F9A /* [CP] Check Pods Manifest.lock */,
 				3B963EC029A5798000ED5046 /* Sources */,
 				3B963EC129A5798000ED5046 /* Frameworks */,
 				3B963EC229A5798000ED5046 /* Resources */,
@@ -226,9 +270,11 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 3B963EDE29A5798000ED5046 /* Build configuration list for PBXNativeTarget "simpleMoneyDiaryUITests" */;
 			buildPhases = (
+				7DB690B3B0E7FAEF141F3BB4 /* [CP] Check Pods Manifest.lock */,
 				3B963ECA29A5798000ED5046 /* Sources */,
 				3B963ECB29A5798000ED5046 /* Frameworks */,
 				3B963ECC29A5798000ED5046 /* Resources */,
+				82EDB97ADCCA7DD290E7ABC4 /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -309,6 +355,109 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		7DB690B3B0E7FAEF141F3BB4 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-simpleMoneyDiary-simpleMoneyDiaryUITests-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		82EDB97ADCCA7DD290E7ABC4 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-simpleMoneyDiary-simpleMoneyDiaryUITests/Pods-simpleMoneyDiary-simpleMoneyDiaryUITests-frameworks-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-simpleMoneyDiary-simpleMoneyDiaryUITests/Pods-simpleMoneyDiary-simpleMoneyDiaryUITests-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-simpleMoneyDiary-simpleMoneyDiaryUITests/Pods-simpleMoneyDiary-simpleMoneyDiaryUITests-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		9EEBDAFC8507D9AF90E59B5F /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-simpleMoneyDiary-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		C2A8EBF07E6B5E7A820AFE66 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-simpleMoneyDiary/Pods-simpleMoneyDiary-frameworks-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-simpleMoneyDiary/Pods-simpleMoneyDiary-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-simpleMoneyDiary/Pods-simpleMoneyDiary-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		E7D8EC67F00A051616764F9A /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-simpleMoneyDiaryTests-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		3B963EAA29A5797C00ED5046 /* Sources */ = {
@@ -492,6 +641,7 @@
 		};
 		3B963ED929A5798000ED5046 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 86F994B122395D4CDD867B33 /* Pods-simpleMoneyDiary.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
@@ -521,6 +671,7 @@
 		};
 		3B963EDA29A5798000ED5046 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 7134C4F8B6FD97CA99B4A573 /* Pods-simpleMoneyDiary.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
@@ -550,6 +701,7 @@
 		};
 		3B963EDC29A5798000ED5046 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 4DBE309903EAC5EB27092617 /* Pods-simpleMoneyDiaryTests.debug.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				BUNDLE_LOADER = "$(TEST_HOST)";
@@ -570,6 +722,7 @@
 		};
 		3B963EDD29A5798000ED5046 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 24DF43D4E2E37013BAB9A0E0 /* Pods-simpleMoneyDiaryTests.release.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				BUNDLE_LOADER = "$(TEST_HOST)";
@@ -590,6 +743,7 @@
 		};
 		3B963EDF29A5798000ED5046 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 3367A419C93132F0FF09234B /* Pods-simpleMoneyDiary-simpleMoneyDiaryUITests.debug.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				CODE_SIGN_STYLE = Automatic;
@@ -608,6 +762,7 @@
 		};
 		3B963EE029A5798000ED5046 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 637878868869B15FE1D91A85 /* Pods-simpleMoneyDiary-simpleMoneyDiaryUITests.release.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				CODE_SIGN_STYLE = Automatic;
