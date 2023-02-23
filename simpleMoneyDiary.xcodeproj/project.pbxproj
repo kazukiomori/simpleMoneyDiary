@@ -9,13 +9,16 @@
 /* Begin PBXBuildFile section */
 		3B963EB229A5797C00ED5046 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3B963EB129A5797C00ED5046 /* AppDelegate.swift */; };
 		3B963EB429A5797C00ED5046 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3B963EB329A5797C00ED5046 /* SceneDelegate.swift */; };
-		3B963EB629A5797C00ED5046 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3B963EB529A5797C00ED5046 /* ViewController.swift */; };
+		3B963EB629A5797C00ED5046 /* HomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3B963EB529A5797C00ED5046 /* HomeViewController.swift */; };
 		3B963EB929A5797C00ED5046 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 3B963EB729A5797C00ED5046 /* Main.storyboard */; };
 		3B963EBB29A5798000ED5046 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 3B963EBA29A5798000ED5046 /* Assets.xcassets */; };
 		3B963EBE29A5798000ED5046 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 3B963EBC29A5798000ED5046 /* LaunchScreen.storyboard */; };
 		3B963EC929A5798000ED5046 /* simpleMoneyDiaryTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3B963EC829A5798000ED5046 /* simpleMoneyDiaryTests.swift */; };
 		3B963ED329A5798000ED5046 /* simpleMoneyDiaryUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3B963ED229A5798000ED5046 /* simpleMoneyDiaryUITests.swift */; };
 		3B963ED529A5798000ED5046 /* simpleMoneyDiaryUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3B963ED429A5798000ED5046 /* simpleMoneyDiaryUITestsLaunchTests.swift */; };
+		3BC8F5ED29A7035600C855C2 /* ExpenseInputViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3BC8F5EC29A7035600C855C2 /* ExpenseInputViewController.swift */; };
+		3BC8F5EF29A703B100C855C2 /* CalendarViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3BC8F5EE29A703B100C855C2 /* CalendarViewController.swift */; };
+		3BC8F5F129A703E500C855C2 /* SavingViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3BC8F5F029A703E500C855C2 /* SavingViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -39,7 +42,7 @@
 		3B963EAE29A5797C00ED5046 /* simpleMoneyDiary.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = simpleMoneyDiary.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		3B963EB129A5797C00ED5046 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		3B963EB329A5797C00ED5046 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
-		3B963EB529A5797C00ED5046 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		3B963EB529A5797C00ED5046 /* HomeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewController.swift; sourceTree = "<group>"; };
 		3B963EB829A5797C00ED5046 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		3B963EBA29A5798000ED5046 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		3B963EBD29A5798000ED5046 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
@@ -49,6 +52,9 @@
 		3B963ECE29A5798000ED5046 /* simpleMoneyDiaryUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = simpleMoneyDiaryUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		3B963ED229A5798000ED5046 /* simpleMoneyDiaryUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = simpleMoneyDiaryUITests.swift; sourceTree = "<group>"; };
 		3B963ED429A5798000ED5046 /* simpleMoneyDiaryUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = simpleMoneyDiaryUITestsLaunchTests.swift; sourceTree = "<group>"; };
+		3BC8F5EC29A7035600C855C2 /* ExpenseInputViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExpenseInputViewController.swift; sourceTree = "<group>"; };
+		3BC8F5EE29A703B100C855C2 /* CalendarViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CalendarViewController.swift; sourceTree = "<group>"; };
+		3BC8F5F029A703E500C855C2 /* SavingViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SavingViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -99,9 +105,14 @@
 		3B963EB029A5797C00ED5046 /* simpleMoneyDiary */ = {
 			isa = PBXGroup;
 			children = (
+				3BC8F5EB29A7032A00C855C2 /* Common */,
+				3BC8F5EA29A7032000C855C2 /* Util */,
+				3BC8F5E929A7031000C855C2 /* View */,
+				3BC8F5E729A702F400C855C2 /* Model */,
+				3BC8F5E629A702E600C855C2 /* ViewModel */,
 				3B963EB129A5797C00ED5046 /* AppDelegate.swift */,
 				3B963EB329A5797C00ED5046 /* SceneDelegate.swift */,
-				3B963EB529A5797C00ED5046 /* ViewController.swift */,
+				3BC8F5E529A702B300C855C2 /* ViewController */,
 				3B963EB729A5797C00ED5046 /* Main.storyboard */,
 				3B963EBA29A5798000ED5046 /* Assets.xcassets */,
 				3B963EBC29A5798000ED5046 /* LaunchScreen.storyboard */,
@@ -125,6 +136,52 @@
 				3B963ED429A5798000ED5046 /* simpleMoneyDiaryUITestsLaunchTests.swift */,
 			);
 			path = simpleMoneyDiaryUITests;
+			sourceTree = "<group>";
+		};
+		3BC8F5E529A702B300C855C2 /* ViewController */ = {
+			isa = PBXGroup;
+			children = (
+				3B963EB529A5797C00ED5046 /* HomeViewController.swift */,
+				3BC8F5EC29A7035600C855C2 /* ExpenseInputViewController.swift */,
+				3BC8F5EE29A703B100C855C2 /* CalendarViewController.swift */,
+				3BC8F5F029A703E500C855C2 /* SavingViewController.swift */,
+			);
+			path = ViewController;
+			sourceTree = "<group>";
+		};
+		3BC8F5E629A702E600C855C2 /* ViewModel */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = ViewModel;
+			sourceTree = "<group>";
+		};
+		3BC8F5E729A702F400C855C2 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		3BC8F5E929A7031000C855C2 /* View */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		3BC8F5EA29A7032000C855C2 /* Util */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Util;
+			sourceTree = "<group>";
+		};
+		3BC8F5EB29A7032A00C855C2 /* Common */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Common;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -258,7 +315,10 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				3B963EB629A5797C00ED5046 /* ViewController.swift in Sources */,
+				3BC8F5EF29A703B100C855C2 /* CalendarViewController.swift in Sources */,
+				3BC8F5ED29A7035600C855C2 /* ExpenseInputViewController.swift in Sources */,
+				3BC8F5F129A703E500C855C2 /* SavingViewController.swift in Sources */,
+				3B963EB629A5797C00ED5046 /* HomeViewController.swift in Sources */,
 				3B963EB229A5797C00ED5046 /* AppDelegate.swift in Sources */,
 				3B963EB429A5797C00ED5046 /* SceneDelegate.swift in Sources */,
 			);
