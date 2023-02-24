@@ -127,9 +127,9 @@
 				3BC8F5E929A7031000C855C2 /* View */,
 				3BC8F5E729A702F400C855C2 /* Model */,
 				3BC8F5E629A702E600C855C2 /* ViewModel */,
+				3BC8F5E529A702B300C855C2 /* ViewController */,
 				3B963EB129A5797C00ED5046 /* AppDelegate.swift */,
 				3B963EB329A5797C00ED5046 /* SceneDelegate.swift */,
-				3BC8F5E529A702B300C855C2 /* ViewController */,
 				3B963EB729A5797C00ED5046 /* Main.storyboard */,
 				3B963EBA29A5798000ED5046 /* Assets.xcassets */,
 				3B963EBC29A5798000ED5046 /* LaunchScreen.storyboard */,
@@ -211,7 +211,6 @@
 				4DBE309903EAC5EB27092617 /* Pods-simpleMoneyDiaryTests.debug.xcconfig */,
 				24DF43D4E2E37013BAB9A0E0 /* Pods-simpleMoneyDiaryTests.release.xcconfig */,
 			);
-			name = Pods;
 			path = Pods;
 			sourceTree = "<group>";
 		};
