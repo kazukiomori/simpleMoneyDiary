@@ -9,6 +9,7 @@ import UIKit
 
 class HomeViewController: UIViewController {
 
+    // MARK: ライフサイクル
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view.

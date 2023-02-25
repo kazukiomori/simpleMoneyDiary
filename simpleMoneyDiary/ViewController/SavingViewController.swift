@@ -9,6 +9,7 @@ import UIKit
 
 class SavingViewController: UIViewController {
     
+    // MARK: ライフサイクル
     override func viewDidLoad() {
         super.viewDidLoad()
     }
