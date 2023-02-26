@@ -21,7 +21,7 @@
                                 <rect key="frame" x="0.0" y="0.0" width="393" height="769"/>
                                 <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                                 <prototypes>
-                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" rowHeight="100" id="kGy-D3-b4Z" customClass="MoneyTableViewCell" customModule="simpleMoneyDiary" customModuleProvider="target">
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="moneyTableViewCell" rowHeight="100" id="kGy-D3-b4Z" customClass="MoneyTableViewCell" customModule="simpleMoneyDiary">
                                         <rect key="frame" x="0.0" y="50" width="393" height="100"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="kGy-D3-b4Z" id="UEd-p6-NBo">
@@ -45,7 +45,7 @@
                                             <outlet property="moneyLabel" destination="EqF-e2-Kvb" id="Cz4-Zb-LQ7"/>
                                         </connections>
                                     </tableViewCell>
-                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" rowHeight="70" id="7mV-Ge-q0t">
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="categoryTableViewCell" rowHeight="70" id="7mV-Ge-q0t" customClass="CategoryTableViewCell" customModule="simpleMoneyDiary" customModuleProvider="target">
                                         <rect key="frame" x="0.0" y="150" width="393" height="70"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="7mV-Ge-q0t" id="wWz-GV-oBj">
@@ -84,8 +84,12 @@
                                                 <constraint firstItem="bUF-e4-XmQ" firstAttribute="top" secondItem="wWz-GV-oBj" secondAttribute="top" constant="10" id="yIu-WG-lmT"/>
                                             </constraints>
                                         </tableViewCellContentView>
+                                        <connections>
+                                            <outlet property="categoryImageView" destination="3mz-5I-wqD" id="CbN-P0-Nes"/>
+                                            <outlet property="categoryLabel" destination="Npo-lA-1ol" id="hHY-32-nQ6"/>
+                                        </connections>
                                     </tableViewCell>
-                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" rowHeight="70" id="mJA-mQ-aIe">
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="dateTableViewCell" rowHeight="70" id="mJA-mQ-aIe" customClass="DateTableViewCell" customModule="simpleMoneyDiary" customModuleProvider="target">
                                         <rect key="frame" x="0.0" y="220" width="393" height="70"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="mJA-mQ-aIe" id="x8Z-u6-xCQ">
@@ -121,8 +125,12 @@
                                                 <constraint firstAttribute="trailing" secondItem="F03-Z7-767" secondAttribute="trailing" constant="20" id="rri-VX-lfO"/>
                                             </constraints>
                                         </tableViewCellContentView>
+                                        <connections>
+                                            <outlet property="dateImageView" destination="FTS-iI-I55" id="W6z-Ab-Uox"/>
+                                            <outlet property="dateLabel" destination="cRe-aF-IEm" id="LYd-Pd-XnT"/>
+                                        </connections>
                                     </tableViewCell>
-                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" rowHeight="70" id="jYo-wn-WCG">
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="memoTableViewCell" rowHeight="70" id="jYo-wn-WCG" customClass="MemoTableViewCell" customModule="simpleMoneyDiary" customModuleProvider="target">
                                         <rect key="frame" x="0.0" y="290" width="393" height="70"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="jYo-wn-WCG" id="iQu-Ic-jm1">
@@ -156,8 +164,16 @@
                                                 <constraint firstAttribute="bottom" secondItem="MgV-Y2-OhT" secondAttribute="bottom" constant="10" id="txh-tl-gaW"/>
                                             </constraints>
                                         </tableViewCellContentView>
+                                        <connections>
+                                            <outlet property="memoImageView" destination="pdb-v7-Ggg" id="SA1-7c-bmu"/>
+                                            <outlet property="memoTextField" destination="jfR-FO-NAt" id="9zu-Rx-nOO"/>
+                                        </connections>
                                     </tableViewCell>
                                 </prototypes>
+                                <connections>
+                                    <outlet property="dataSource" destination="LVz-g6-iQ4" id="Byj-XK-0gl"/>
+                                    <outlet property="delegate" destination="LVz-g6-iQ4" id="rU5-Sh-ju9"/>
+                                </connections>
                             </tableView>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="WM1-HN-d8u"/>
@@ -171,6 +187,9 @@
                     </view>
                     <tabBarItem key="tabBarItem" title="記録" image="pencil" catalog="system" id="njW-Ms-FR9"/>
                     <navigationItem key="navigationItem" id="2ZP-fm-lf8"/>
+                    <connections>
+                        <outlet property="tableView" destination="jxL-Ja-pM4" id="it6-R7-Qnp"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="pMd-0s-QX4" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
