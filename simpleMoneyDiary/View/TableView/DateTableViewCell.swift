@@ -10,7 +10,7 @@ import UIKit
 class DateTableViewCell: UITableViewCell {
     
     @IBOutlet weak var dateImageView: UIImageView!
-    @IBOutlet weak var dateLabel: UILabel!
+    @IBOutlet weak var dateTextField: UITextField!
     
     
     override func awakeFromNib() {

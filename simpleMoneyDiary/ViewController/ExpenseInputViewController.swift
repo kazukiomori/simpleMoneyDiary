@@ -47,7 +47,7 @@ class ExpenseInputViewController: UIViewController, UITableViewDelegate, UITable
         case 1:
             guard let cell = tableView.dequeueReusableCell(withIdentifier: "categoryTableViewCell", for: indexPath) as? CategoryTableViewCell else { return UITableViewCell() }
             cell.categoryImageView?.image = self.categoryImage
-            cell.categoryLabel?.text = self.categoryText
+            cell.categoryTextField?.text = self.categoryText
             return cell
         case 2:
             guard let cell = tableView.dequeueReusableCell(withIdentifier: "dateTableViewCell", for: indexPath) as? DateTableViewCell else { return UITableViewCell() }
@@ -64,13 +64,16 @@ class ExpenseInputViewController: UIViewController, UITableViewDelegate, UITable
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         tableView.deselectRow(at: indexPath as IndexPath, animated: true)
         if indexPath.row == 0 {
-
+            // 計算機のviewをキーボードみたいに下から表示する
+            // 計算機で入力した値とラベルで表示してる金額を紐づける
         } else if indexPath.row == 1 {
-            
+            // カテゴリ一覧のviewを表示
+            // 選択したカテゴリのimageとカテゴリ名をcellに表示
         } else if indexPath.row == 2 {
-            
+            // datePickerで日付を表示
+            // 初期値は当日の日付
         } else {
-           
+           // メモ用のキーボード表示
         }
     }
     

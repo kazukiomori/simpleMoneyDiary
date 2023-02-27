@@ -61,19 +61,15 @@
                                                                 <constraint firstAttribute="width" constant="40" id="3RH-nC-iQQ"/>
                                                             </constraints>
                                                         </imageView>
-                                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="未分類" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Npo-lA-1ol">
+                                                        <textField opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="248" contentHorizontalAlignment="left" contentVerticalAlignment="center" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="12g-SQ-Pef">
                                                             <rect key="frame" x="50" y="0.0" width="303" height="50"/>
-                                                            <constraints>
-                                                                <constraint firstAttribute="width" constant="100" id="dpD-bH-Tw0"/>
-                                                            </constraints>
-                                                            <fontDescription key="fontDescription" type="system" pointSize="30"/>
-                                                            <nil key="textColor"/>
-                                                            <nil key="highlightedColor"/>
-                                                        </label>
+                                                            <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                                            <textInputTraits key="textInputTraits"/>
+                                                        </textField>
                                                     </subviews>
                                                     <constraints>
                                                         <constraint firstItem="3mz-5I-wqD" firstAttribute="leading" secondItem="bUF-e4-XmQ" secondAttribute="leading" id="A7e-Yy-GwD"/>
-                                                        <constraint firstItem="Npo-lA-1ol" firstAttribute="leading" secondItem="3mz-5I-wqD" secondAttribute="trailing" constant="10" id="xS6-S1-azp"/>
+                                                        <constraint firstItem="12g-SQ-Pef" firstAttribute="leading" secondItem="3mz-5I-wqD" secondAttribute="trailing" constant="10" id="nX2-e7-Iiy"/>
                                                     </constraints>
                                                 </stackView>
                                             </subviews>
@@ -86,7 +82,7 @@
                                         </tableViewCellContentView>
                                         <connections>
                                             <outlet property="categoryImageView" destination="3mz-5I-wqD" id="CbN-P0-Nes"/>
-                                            <outlet property="categoryLabel" destination="Npo-lA-1ol" id="hHY-32-nQ6"/>
+                                            <outlet property="categoryTextField" destination="12g-SQ-Pef" id="mLQ-P8-Htp"/>
                                         </connections>
                                     </tableViewCell>
                                     <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="dateTableViewCell" rowHeight="70" id="mJA-mQ-aIe" customClass="DateTableViewCell" customModule="simpleMoneyDiary" customModuleProvider="target">
@@ -105,15 +101,14 @@
                                                                 <constraint firstAttribute="width" constant="40" id="baO-UJ-HY1"/>
                                                             </constraints>
                                                         </imageView>
-                                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="2023年2月25日" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="cRe-aF-IEm">
+                                                        <textField opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="248" contentHorizontalAlignment="left" contentVerticalAlignment="center" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="q4R-bt-8l5">
                                                             <rect key="frame" x="50" y="0.0" width="303" height="50"/>
-                                                            <fontDescription key="fontDescription" type="system" pointSize="30"/>
-                                                            <nil key="textColor"/>
-                                                            <nil key="highlightedColor"/>
-                                                        </label>
+                                                            <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                                            <textInputTraits key="textInputTraits"/>
+                                                        </textField>
                                                     </subviews>
                                                     <constraints>
-                                                        <constraint firstItem="cRe-aF-IEm" firstAttribute="leading" secondItem="FTS-iI-I55" secondAttribute="trailing" constant="10" id="YKm-A3-nls"/>
+                                                        <constraint firstItem="q4R-bt-8l5" firstAttribute="leading" secondItem="FTS-iI-I55" secondAttribute="trailing" constant="10" id="U4S-eX-UWO"/>
                                                         <constraint firstItem="FTS-iI-I55" firstAttribute="leading" secondItem="F03-Z7-767" secondAttribute="leading" id="qpT-6Y-lSS"/>
                                                     </constraints>
                                                 </stackView>
@@ -127,7 +122,7 @@
                                         </tableViewCellContentView>
                                         <connections>
                                             <outlet property="dateImageView" destination="FTS-iI-I55" id="W6z-Ab-Uox"/>
-                                            <outlet property="dateLabel" destination="cRe-aF-IEm" id="LYd-Pd-XnT"/>
+                                            <outlet property="dateTextField" destination="q4R-bt-8l5" id="Uai-7b-icT"/>
                                         </connections>
                                     </tableViewCell>
                                     <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="memoTableViewCell" rowHeight="70" id="jYo-wn-WCG" customClass="MemoTableViewCell" customModule="simpleMoneyDiary" customModuleProvider="target">
