@@ -11,12 +11,18 @@ class ExpenseInputViewController: UIViewController, UITableViewDelegate, UITable
    
     // MARK: プロパティ
     @IBOutlet weak var tableView: UITableView!
+    var moneyTableViewCell: MoneyTableViewCell!
+    var categoryTableViewCell: CategoryTableViewCell!
+    var dateTableViewCell: DateTableViewCell!
+    var memoTableViewCell: MemoTableViewCell!
     
     var moneyText = "¥0"
     var categoryText = "未入力"
     var categoryImage = UIImage(systemName: "tag")
     var dateImage = UIImage(systemName: "calendar.circle")
     var memoImage = UIImage(systemName: "note")
+    var datePicker: UIDatePicker = UIDatePicker()
+    var textField: UITextField!
     
     
     // MARK: ライフサイクル
@@ -24,6 +30,11 @@ class ExpenseInputViewController: UIViewController, UITableViewDelegate, UITable
         super.viewDidLoad()
         tableView.delegate = self
         tableView.dataSource = self
+        datePickerSet()
+//        moneyTableViewCell = tableView.dequeueReusableCell(withIdentifier: "moneyTableViewCell", for: NSIndexPath(row: 0, section: 0) as IndexPath) as? MoneyTableViewCell
+//        categoryTableViewCell = tableView.dequeueReusableCell(withIdentifier: "categoryTableViewCell", for: NSIndexPath(row: 0, section: 1) as IndexPath) as? CategoryTableViewCell
+//        dateTableViewCell = tableView.dequeueReusableCell(withIdentifier: "dateTableViewCell", for: NSIndexPath(row: 0, section: 2) as IndexPath) as? DateTableViewCell
+//        memoTableViewCell = tableView.dequeueReusableCell(withIdentifier: "memoTableViewCell", for: NSIndexPath(row: 0, section: 3) as IndexPath) as? MemoTableViewCell
 //        tableView.register(MoneyTableViewCell.self, forCellReuseIdentifier: "moneyTableViewCell")
 //        tableView.register(CategoryTableViewCell.self, forCellReuseIdentifier: "categoryTableViewCell")
 //        tableView.register(DateTableViewCell.self, forCellReuseIdentifier: "dateTableViewCell")
@@ -32,6 +43,41 @@ class ExpenseInputViewController: UIViewController, UITableViewDelegate, UITable
     
     
     // MARK: メソッド
+    
+    func datePickerSet() {
+        datePicker.datePickerMode = .date
+        datePicker.timeZone = NSTimeZone.local
+        datePicker.locale = Locale.current
+        datePicker.maximumDate = Date()
+        
+        if #available(iOS 13.4, *) {
+            datePicker.preferredDatePickerStyle = .wheels
+        }
+        datePicker.addTarget(self, action: #selector(changeDatePicker), for: .valueChanged)
+    }
+    
+    func createToolBar () -> UIToolbar {
+        let dateToolBar = UIToolbar(frame: CGRect(x: 0, y: 0, width: view.frame.width, height: 40))
+        let spacerItem = UIBarButtonItem(barButtonSystemItem: .flexibleSpace, target: self, action: nil)
+        let dateDoneItem = UIBarButtonItem(title: "決定", style: .done, target: self, action: #selector(dateSelect))
+        dateToolBar.setItems([spacerItem, dateDoneItem], animated: true)
+        
+        return dateToolBar
+    }
+    
+    @objc func changeDatePicker(sender: UIDatePicker) {
+        let formatter = DateFormatter()
+        formatter.dateFormat = "yyyy年MM月dd日"
+        textField.text = "\(formatter.string(from: sender.date))"
+        textField.sendActions(for: .valueChanged)
+    }
+    
+    @objc func dateSelect() {
+        textField.endEditing(true)
+        let formatter = DateFormatter()
+        formatter.dateFormat = "yyyy年MM月dd日"
+        textField.text = "\(formatter.string(from: datePicker.date))"
+    }
     
     // MARK: tableView関連
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
@@ -52,6 +98,12 @@ class ExpenseInputViewController: UIViewController, UITableViewDelegate, UITable
         case 2:
             guard let cell = tableView.dequeueReusableCell(withIdentifier: "dateTableViewCell", for: indexPath) as? DateTableViewCell else { return UITableViewCell() }
             cell.dateImageView?.image = self.dateImage
+            let formatter = DateFormatter()
+            formatter.dateFormat = "yyyy年MM月dd日"
+            cell.dateTextField?.text = "\(formatter.string(from: Date()))"
+            cell.dateTextField?.inputView = datePicker
+            cell.dateTextField?.inputAccessoryView = createToolBar()
+            textField = cell.dateTextField
             return cell
         default:
             guard let cell = tableView.dequeueReusableCell(withIdentifier: "memoTableViewCell", for: indexPath) as? MemoTableViewCell else { return UITableViewCell() }
