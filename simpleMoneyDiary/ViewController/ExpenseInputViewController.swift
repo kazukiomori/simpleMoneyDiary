@@ -31,18 +31,20 @@ class ExpenseInputViewController: UIViewController, UITableViewDelegate, UITable
         tableView.delegate = self
         tableView.dataSource = self
         datePickerSet()
-//        moneyTableViewCell = tableView.dequeueReusableCell(withIdentifier: "moneyTableViewCell", for: NSIndexPath(row: 0, section: 0) as IndexPath) as? MoneyTableViewCell
-//        categoryTableViewCell = tableView.dequeueReusableCell(withIdentifier: "categoryTableViewCell", for: NSIndexPath(row: 0, section: 1) as IndexPath) as? CategoryTableViewCell
-//        dateTableViewCell = tableView.dequeueReusableCell(withIdentifier: "dateTableViewCell", for: NSIndexPath(row: 0, section: 2) as IndexPath) as? DateTableViewCell
-//        memoTableViewCell = tableView.dequeueReusableCell(withIdentifier: "memoTableViewCell", for: NSIndexPath(row: 0, section: 3) as IndexPath) as? MemoTableViewCell
-//        tableView.register(MoneyTableViewCell.self, forCellReuseIdentifier: "moneyTableViewCell")
-//        tableView.register(CategoryTableViewCell.self, forCellReuseIdentifier: "categoryTableViewCell")
-//        tableView.register(DateTableViewCell.self, forCellReuseIdentifier: "dateTableViewCell")
-//        tableView.register(MemoTableViewCell.self, forCellReuseIdentifier: "memoTableViewCell")
+        navigationItemSet()
     }
     
     
     // MARK: メソッド
+    
+    func navigationItemSet() {
+        self.navigationController?.navigationBar.setBackgroundImage(UIImage(), for: UIBarMetrics.default)
+        self.navigationController?.navigationBar.shadowImage = UIImage()
+        var addBarButtonItem = UIBarButtonItem(title: "保存", style: .done, target: self, action: #selector(addButtonTapped))
+        addBarButtonItem.tintColor = .black
+        self.navigationItem.rightBarButtonItems = [addBarButtonItem]
+        navigationItem.title = "入力"
+    }
     
     func datePickerSet() {
         datePicker.datePickerMode = .date
@@ -63,6 +65,10 @@ class ExpenseInputViewController: UIViewController, UITableViewDelegate, UITable
         dateToolBar.setItems([spacerItem, dateDoneItem], animated: true)
         
         return dateToolBar
+    }
+    
+    @objc func addButtonTapped() {
+        
     }
     
     @objc func changeDatePicker(sender: UIDatePicker) {
@@ -93,7 +99,7 @@ class ExpenseInputViewController: UIViewController, UITableViewDelegate, UITable
         case 1:
             guard let cell = tableView.dequeueReusableCell(withIdentifier: "categoryTableViewCell", for: indexPath) as? CategoryTableViewCell else { return UITableViewCell() }
             cell.categoryImageView?.image = self.categoryImage
-            cell.categoryTextField?.text = self.categoryText
+            cell.categoryButton?.setTitle(self.categoryText, for: .normal)
             return cell
         case 2:
             guard let cell = tableView.dequeueReusableCell(withIdentifier: "dateTableViewCell", for: indexPath) as? DateTableViewCell else { return UITableViewCell() }

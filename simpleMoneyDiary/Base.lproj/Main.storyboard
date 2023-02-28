@@ -61,15 +61,18 @@
                                                                 <constraint firstAttribute="width" constant="40" id="3RH-nC-iQQ"/>
                                                             </constraints>
                                                         </imageView>
-                                                        <textField opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="248" contentHorizontalAlignment="left" contentVerticalAlignment="center" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="12g-SQ-Pef">
+                                                        <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="QbR-RU-1iT">
                                                             <rect key="frame" x="50" y="0.0" width="303" height="50"/>
-                                                            <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                                            <textInputTraits key="textInputTraits"/>
-                                                        </textField>
+                                                            <color key="tintColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                            <state key="normal" title="Button"/>
+                                                            <buttonConfiguration key="configuration" style="plain" title="未分類">
+                                                                <fontDescription key="titleFontDescription" type="system" pointSize="25"/>
+                                                            </buttonConfiguration>
+                                                        </button>
                                                     </subviews>
                                                     <constraints>
                                                         <constraint firstItem="3mz-5I-wqD" firstAttribute="leading" secondItem="bUF-e4-XmQ" secondAttribute="leading" id="A7e-Yy-GwD"/>
-                                                        <constraint firstItem="12g-SQ-Pef" firstAttribute="leading" secondItem="3mz-5I-wqD" secondAttribute="trailing" constant="10" id="nX2-e7-Iiy"/>
+                                                        <constraint firstItem="QbR-RU-1iT" firstAttribute="leading" secondItem="3mz-5I-wqD" secondAttribute="trailing" constant="10" id="fhP-IK-grb"/>
                                                     </constraints>
                                                 </stackView>
                                             </subviews>
@@ -81,8 +84,8 @@
                                             </constraints>
                                         </tableViewCellContentView>
                                         <connections>
+                                            <outlet property="categoryButton" destination="QbR-RU-1iT" id="dXW-Bh-ffE"/>
                                             <outlet property="categoryImageView" destination="3mz-5I-wqD" id="CbN-P0-Nes"/>
-                                            <outlet property="categoryTextField" destination="12g-SQ-Pef" id="mLQ-P8-Htp"/>
                                         </connections>
                                     </tableViewCell>
                                     <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="dateTableViewCell" rowHeight="70" id="mJA-mQ-aIe" customClass="DateTableViewCell" customModule="simpleMoneyDiary" customModuleProvider="target">
@@ -103,7 +106,7 @@
                                                         </imageView>
                                                         <textField opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="248" contentHorizontalAlignment="left" contentVerticalAlignment="center" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="q4R-bt-8l5">
                                                             <rect key="frame" x="50" y="0.0" width="303" height="50"/>
-                                                            <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                                            <fontDescription key="fontDescription" type="system" pointSize="25"/>
                                                             <textInputTraits key="textInputTraits"/>
                                                         </textField>
                                                     </subviews>

@@ -10,7 +10,7 @@ import UIKit
 class CategoryTableViewCell: UITableViewCell {
     
     @IBOutlet weak var categoryImageView: UIImageView!
-    @IBOutlet weak var categoryTextField: UITextField!
+    @IBOutlet weak var categoryButton: UIButton!
     
     override func awakeFromNib() {
         super.awakeFromNib()
