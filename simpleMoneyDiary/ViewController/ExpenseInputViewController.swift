@@ -9,7 +9,7 @@ import UIKit
 import RxSwift
 import RxCocoa
 
-class ExpenseInputViewController: UIViewController, UITableViewDelegate, UITableViewDataSource {
+class ExpenseInputViewController: UIViewController, UITableViewDelegate, UITableViewDataSource, UITextFieldDelegate {
    
     // MARK: プロパティ
     @IBOutlet weak var tableView: UITableView!
@@ -24,7 +24,8 @@ class ExpenseInputViewController: UIViewController, UITableViewDelegate, UITable
     var dateImage = UIImage(systemName: "calendar.circle")
     var memoImage = UIImage(systemName: "note")
     var datePicker: UIDatePicker = UIDatePicker()
-    var textField: UITextField!
+    var dateTextField: UITextField!
+    var moneyTextField: UITextField!
     
     private let disposeBag = DisposeBag()
     
@@ -34,6 +35,7 @@ class ExpenseInputViewController: UIViewController, UITableViewDelegate, UITable
         super.viewDidLoad()
         tableView.delegate = self
         tableView.dataSource = self
+        moneyTextField?.delegate = self
         datePickerSet()
         navigationItemSet()
     }
@@ -44,7 +46,7 @@ class ExpenseInputViewController: UIViewController, UITableViewDelegate, UITable
     func navigationItemSet() {
         self.navigationController?.navigationBar.setBackgroundImage(UIImage(), for: UIBarMetrics.default)
         self.navigationController?.navigationBar.shadowImage = UIImage()
-        var addBarButtonItem = UIBarButtonItem(title: "保存", style: .done, target: self, action: #selector(addButtonTapped))
+        let addBarButtonItem = UIBarButtonItem(title: "保存", style: .done, target: self, action: #selector(addButtonTapped))
         addBarButtonItem.tintColor = .black
         self.navigationItem.rightBarButtonItems = [addBarButtonItem]
         navigationItem.title = "入力"
@@ -62,7 +64,20 @@ class ExpenseInputViewController: UIViewController, UITableViewDelegate, UITable
         datePicker.addTarget(self, action: #selector(changeDatePicker), for: .valueChanged)
     }
     
-    func createToolBar () -> UIToolbar {
+    func createMoneyToolBar() -> UIToolbar {
+        let dateToolBar = UIToolbar(frame: CGRect(x: 0, y: 0, width: view.frame.width, height: 40))
+        let spacerItem = UIBarButtonItem(barButtonSystemItem: .flexibleSpace, target: self, action: nil)
+        let dateDoneItem = UIBarButtonItem(title: "決定", style: .done, target: self, action: #selector(moneySelect))
+        dateToolBar.setItems([spacerItem, dateDoneItem], animated: true)
+        
+        return dateToolBar
+    }
+    
+    @objc func moneySelect() {
+        moneyTextField.endEditing(true)
+    }
+    
+    func createDateToolBar () -> UIToolbar {
         let dateToolBar = UIToolbar(frame: CGRect(x: 0, y: 0, width: view.frame.width, height: 40))
         let spacerItem = UIBarButtonItem(barButtonSystemItem: .flexibleSpace, target: self, action: nil)
         let dateDoneItem = UIBarButtonItem(title: "決定", style: .done, target: self, action: #selector(dateSelect))
@@ -78,15 +93,15 @@ class ExpenseInputViewController: UIViewController, UITableViewDelegate, UITable
     @objc func changeDatePicker(sender: UIDatePicker) {
         let formatter = DateFormatter()
         formatter.dateFormat = "yyyy年MM月dd日"
-        textField.text = "\(formatter.string(from: sender.date))"
-        textField.sendActions(for: .valueChanged)
+        dateTextField.text = "\(formatter.string(from: sender.date))"
+        dateTextField.sendActions(for: .valueChanged)
     }
     
     @objc func dateSelect() {
-        textField.endEditing(true)
+        dateTextField.endEditing(true)
         let formatter = DateFormatter()
         formatter.dateFormat = "yyyy年MM月dd日"
-        textField.text = "\(formatter.string(from: datePicker.date))"
+        dateTextField.text = "\(formatter.string(from: datePicker.date))"
     }
     
     // MARK: tableView関連
@@ -99,6 +114,23 @@ class ExpenseInputViewController: UIViewController, UITableViewDelegate, UITable
         case 0:
             guard let cell = tableView.dequeueReusableCell(withIdentifier: "moneyTableViewCell", for: indexPath) as? MoneyTableViewCell else { return UITableViewCell() }
             cell.moneyTextField?.text = self.moneyText
+            cell.moneyTextField?.inputAccessoryView = createMoneyToolBar()
+            cell.moneyTextField?.keyboardType = .numberPad
+            
+            let editingDidBeginObservable = cell.moneyTextField.rx.controlEvent(.editingDidBegin).asObservable()
+            editingDidBeginObservable
+                .subscribe(onNext: { [weak self] in
+                    if cell.moneyTextField.text == "¥0" {
+                        cell.moneyTextField.text = ""
+                    }
+                    // ここにeditingDidBegin時の処理を記述する
+                })
+                .disposed(by: disposeBag)
+            cell.moneyTextField.rx.text.orEmpty
+                .subscribe(onNext: { text in
+                    cell.moneyTextField.text = text
+                }).disposed(by: disposeBag)
+            moneyTextField = cell.moneyTextField
             return cell
         case 1:
             guard let cell = tableView.dequeueReusableCell(withIdentifier: "categoryTableViewCell", for: indexPath) as? CategoryTableViewCell else { return UITableViewCell() }
@@ -117,8 +149,9 @@ class ExpenseInputViewController: UIViewController, UITableViewDelegate, UITable
             formatter.dateFormat = "yyyy年MM月dd日"
             cell.dateTextField?.text = "\(formatter.string(from: Date()))"
             cell.dateTextField?.inputView = datePicker
-            cell.dateTextField?.inputAccessoryView = createToolBar()
-            textField = cell.dateTextField
+            cell.dateTextField?.inputAccessoryView = createDateToolBar()
+            cell.dateTextField?.keyboardType = .webSearch
+            dateTextField = cell.dateTextField
             return cell
         default:
             guard let cell = tableView.dequeueReusableCell(withIdentifier: "memoTableViewCell", for: indexPath) as? MemoTableViewCell else { return UITableViewCell() }
@@ -147,4 +180,19 @@ class ExpenseInputViewController: UIViewController, UITableViewDelegate, UITable
     func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
         return 100
     }
+    
+    // MARK: textField関連
+    func textFieldDidBeginEditing(_ textField: UITextField) {
+            // テキストフィールドが編集され始めたら、初期値の「¥0」を削除する
+            if moneyTextField.text == "¥0" {
+                moneyTextField.text = ""
+            }
+        }
+        
+        func textFieldDidEndEditing(_ textField: UITextField) {
+            // テキストフィールドが編集が終わったら、空欄になっていたら「¥0」を再度設定する
+            if moneyTextField.text == "" {
+                moneyTextField.text = "¥0"
+            }
+        }
 }

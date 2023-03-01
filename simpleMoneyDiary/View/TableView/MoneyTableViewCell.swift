@@ -6,10 +6,13 @@
 //
 
 import UIKit
+import RxSwift
 
 class MoneyTableViewCell: UITableViewCell {
     
     @IBOutlet weak var moneyTextField: UITextField!
+    
+    var disposeBag = DisposeBag()
     
     override func awakeFromNib() {
         super.awakeFromNib()
@@ -17,5 +20,10 @@ class MoneyTableViewCell: UITableViewCell {
     
     override func setSelected(_ selected: Bool, animated: Bool) {
         super.setSelected(selected, animated: animated)
+    }
+    
+    override func prepareForReuse() {
+        super.prepareForReuse()
+        self.disposeBag = DisposeBag()
     }
 }
