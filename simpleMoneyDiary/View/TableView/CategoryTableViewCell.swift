@@ -6,11 +6,14 @@
 //
 
 import UIKit
+import RxSwift
 
 class CategoryTableViewCell: UITableViewCell {
     
     @IBOutlet weak var categoryImageView: UIImageView!
     @IBOutlet weak var categoryButton: UIButton!
+    
+    var disposeBag = DisposeBag()
     
     override func awakeFromNib() {
         super.awakeFromNib()
@@ -19,4 +22,9 @@ class CategoryTableViewCell: UITableViewCell {
     override func setSelected(_ selected: Bool, animated: Bool) {
         super.setSelected(selected, animated: animated)
     }
+    
+    override func prepareForReuse() {
+            super.prepareForReuse()
+            self.disposeBag = DisposeBag()
+        }
 }

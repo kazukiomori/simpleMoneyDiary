@@ -9,7 +9,7 @@ import UIKit
 
 class MoneyTableViewCell: UITableViewCell {
     
-    @IBOutlet weak var moneyLabel: UILabel!
+    @IBOutlet weak var moneyTextField: UITextField!
     
     override func awakeFromNib() {
         super.awakeFromNib()

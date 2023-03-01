@@ -6,6 +6,8 @@
 //
 
 import UIKit
+import RxSwift
+import RxCocoa
 
 class ExpenseInputViewController: UIViewController, UITableViewDelegate, UITableViewDataSource {
    
@@ -23,6 +25,8 @@ class ExpenseInputViewController: UIViewController, UITableViewDelegate, UITable
     var memoImage = UIImage(systemName: "note")
     var datePicker: UIDatePicker = UIDatePicker()
     var textField: UITextField!
+    
+    private let disposeBag = DisposeBag()
     
     
     // MARK: ライフサイクル
@@ -94,12 +98,17 @@ class ExpenseInputViewController: UIViewController, UITableViewDelegate, UITable
         switch indexPath.row {
         case 0:
             guard let cell = tableView.dequeueReusableCell(withIdentifier: "moneyTableViewCell", for: indexPath) as? MoneyTableViewCell else { return UITableViewCell() }
-            cell.moneyLabel?.text = self.moneyText
+            cell.moneyTextField?.text = self.moneyText
             return cell
         case 1:
             guard let cell = tableView.dequeueReusableCell(withIdentifier: "categoryTableViewCell", for: indexPath) as? CategoryTableViewCell else { return UITableViewCell() }
             cell.categoryImageView?.image = self.categoryImage
             cell.categoryButton?.setTitle(self.categoryText, for: .normal)
+            cell.categoryButton?.rx.tap.asDriver().drive (onNext :{ _ in
+                let storyBoard = UIStoryboard(name: "Main", bundle: nil)
+                guard let nextViewController = storyBoard.instantiateViewController(withIdentifier: "categoryListViewController") as? CategoryListViewController else { return }
+                self.navigationController?.show(nextViewController, sender: nil)
+            }).disposed(by: cell.disposeBag)
             return cell
         case 2:
             guard let cell = tableView.dequeueReusableCell(withIdentifier: "dateTableViewCell", for: indexPath) as? DateTableViewCell else { return UITableViewCell() }

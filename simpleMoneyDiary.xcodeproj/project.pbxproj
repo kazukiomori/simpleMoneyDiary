@@ -11,6 +11,7 @@
 		37CED39BC7333A0CDA09FD70 /* Pods_simpleMoneyDiary_simpleMoneyDiaryUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8F0F187BF4A0C7617729DFBA /* Pods_simpleMoneyDiary_simpleMoneyDiaryUITests.framework */; };
 		3B366EDD29AE112400E140A7 /* AppDate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3B366EDC29AE112400E140A7 /* AppDate.swift */; };
 		3B366EDF29AE115600E140A7 /* messageAlert.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3B366EDE29AE115600E140A7 /* messageAlert.swift */; };
+		3B366EE129AEBB4F00E140A7 /* CategoryListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3B366EE029AEBB4E00E140A7 /* CategoryListViewController.swift */; };
 		3B48EC8929AA21470080F3EB /* CategoryTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3B48EC8829AA21470080F3EB /* CategoryTableViewCell.swift */; };
 		3B48EC8B29AA21CD0080F3EB /* DateTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3B48EC8A29AA21CD0080F3EB /* DateTableViewCell.swift */; };
 		3B48EC8D29AA21E40080F3EB /* MemoTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3B48EC8C29AA21E40080F3EB /* MemoTableViewCell.swift */; };
@@ -52,6 +53,7 @@
 		3367A419C93132F0FF09234B /* Pods-simpleMoneyDiary-simpleMoneyDiaryUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-simpleMoneyDiary-simpleMoneyDiaryUITests.debug.xcconfig"; path = "Target Support Files/Pods-simpleMoneyDiary-simpleMoneyDiaryUITests/Pods-simpleMoneyDiary-simpleMoneyDiaryUITests.debug.xcconfig"; sourceTree = "<group>"; };
 		3B366EDC29AE112400E140A7 /* AppDate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = AppDate.swift; path = simpleMoneyDiary/AppDate.swift; sourceTree = SOURCE_ROOT; };
 		3B366EDE29AE115600E140A7 /* messageAlert.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = messageAlert.swift; path = simpleMoneyDiary/messageAlert.swift; sourceTree = SOURCE_ROOT; };
+		3B366EE029AEBB4E00E140A7 /* CategoryListViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CategoryListViewController.swift; sourceTree = "<group>"; };
 		3B48EC8829AA21470080F3EB /* CategoryTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CategoryTableViewCell.swift; sourceTree = "<group>"; };
 		3B48EC8A29AA21CD0080F3EB /* DateTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DateTableViewCell.swift; sourceTree = "<group>"; };
 		3B48EC8C29AA21E40080F3EB /* MemoTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MemoTableViewCell.swift; sourceTree = "<group>"; };
@@ -174,6 +176,7 @@
 				3BC8F5EC29A7035600C855C2 /* ExpenseInputViewController.swift */,
 				3BC8F5EE29A703B100C855C2 /* CalendarViewController.swift */,
 				3BC8F5F029A703E500C855C2 /* SavingViewController.swift */,
+				3B366EE029AEBB4E00E140A7 /* CategoryListViewController.swift */,
 			);
 			path = ViewController;
 			sourceTree = "<group>";
@@ -490,6 +493,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				3B366EDD29AE112400E140A7 /* AppDate.swift in Sources */,
+				3B366EE129AEBB4F00E140A7 /* CategoryListViewController.swift in Sources */,
 				3BC8F5EF29A703B100C855C2 /* CalendarViewController.swift in Sources */,
 				3BC8F5ED29A7035600C855C2 /* ExpenseInputViewController.swift in Sources */,
 				3BC8F5F129A703E500C855C2 /* SavingViewController.swift in Sources */,
