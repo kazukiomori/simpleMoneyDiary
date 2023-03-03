@@ -18,7 +18,7 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="-1" estimatedSectionHeaderHeight="-1" sectionFooterHeight="-1" estimatedSectionFooterHeight="-1" translatesAutoresizingMaskIntoConstraints="NO" id="jxL-Ja-pM4">
-                                <rect key="frame" x="0.0" y="0.0" width="393" height="769"/>
+                                <rect key="frame" x="0.0" y="0.0" width="393" height="539"/>
                                 <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                                 <prototypes>
                                     <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="moneyTableViewCell" rowHeight="100" id="kGy-D3-b4Z" customClass="MoneyTableViewCell" customModule="simpleMoneyDiary">
@@ -147,7 +147,7 @@
                                                                 <constraint firstAttribute="width" constant="40" id="2ta-2L-sJA"/>
                                                             </constraints>
                                                         </imageView>
-                                                        <textField opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="248" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="内容を入力" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="jfR-FO-NAt">
+                                                        <textField opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="248" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="内容を入力" textAlignment="natural" minimumFontSize="17" clearButtonMode="always" translatesAutoresizingMaskIntoConstraints="NO" id="jfR-FO-NAt">
                                                             <rect key="frame" x="50" y="0.0" width="303" height="50"/>
                                                             <fontDescription key="fontDescription" type="system" pointSize="20"/>
                                                             <textInputTraits key="textInputTraits"/>
@@ -181,7 +181,7 @@
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         <constraints>
                             <constraint firstItem="WM1-HN-d8u" firstAttribute="trailing" secondItem="jxL-Ja-pM4" secondAttribute="trailing" id="HHQ-yV-FSE"/>
-                            <constraint firstItem="WM1-HN-d8u" firstAttribute="bottom" secondItem="jxL-Ja-pM4" secondAttribute="bottom" id="VIU-Dq-hvG"/>
+                            <constraint firstItem="jxL-Ja-pM4" firstAttribute="bottom" secondItem="WM1-HN-d8u" secondAttribute="bottom" constant="-230" id="ccM-jg-Ssh"/>
                             <constraint firstItem="jxL-Ja-pM4" firstAttribute="top" secondItem="6gP-3I-9Iw" secondAttribute="top" id="cgS-eX-JIj"/>
                             <constraint firstItem="jxL-Ja-pM4" firstAttribute="leading" secondItem="WM1-HN-d8u" secondAttribute="leading" id="jxl-c1-Yry"/>
                         </constraints>

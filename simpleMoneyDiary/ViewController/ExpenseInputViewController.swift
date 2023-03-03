@@ -40,6 +40,11 @@ class ExpenseInputViewController: UIViewController, UITableViewDelegate, UITable
         navigationItemSet()
     }
     
+    override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(animated)
+        tableView.reloadData()
+    }
+    
     
     // MARK: メソッド
     
@@ -136,6 +141,7 @@ class ExpenseInputViewController: UIViewController, UITableViewDelegate, UITable
             guard let cell = tableView.dequeueReusableCell(withIdentifier: "categoryTableViewCell", for: indexPath) as? CategoryTableViewCell else { return UITableViewCell() }
             cell.categoryImageView?.image = self.categoryImage
             cell.categoryButton?.setTitle(self.categoryText, for: .normal)
+            cell.categoryButton?.titleLabel?.font = UIFont.systemFont(ofSize: 25)
             cell.categoryButton?.rx.tap.asDriver().drive (onNext :{ _ in
                 let storyBoard = UIStoryboard(name: "Main", bundle: nil)
                 guard let nextViewController = storyBoard.instantiateViewController(withIdentifier: "categoryListViewController") as? CategoryListViewController else { return }
