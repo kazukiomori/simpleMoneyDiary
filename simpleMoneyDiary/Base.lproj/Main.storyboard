@@ -18,7 +18,7 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="-1" estimatedSectionHeaderHeight="-1" sectionFooterHeight="-1" estimatedSectionFooterHeight="-1" translatesAutoresizingMaskIntoConstraints="NO" id="jxL-Ja-pM4">
-                                <rect key="frame" x="0.0" y="0.0" width="393" height="539"/>
+                                <rect key="frame" x="0.0" y="0.0" width="393" height="499"/>
                                 <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                                 <prototypes>
                                     <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="moneyTableViewCell" rowHeight="100" id="kGy-D3-b4Z" customClass="MoneyTableViewCell" customModule="simpleMoneyDiary">
@@ -28,7 +28,7 @@
                                             <rect key="frame" x="0.0" y="0.0" width="393" height="100"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
-                                                <textField opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="248" contentHorizontalAlignment="left" contentVerticalAlignment="center" text="¥0" textAlignment="right" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="kd4-pH-jau">
+                                                <textField opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="248" contentHorizontalAlignment="left" contentVerticalAlignment="center" text="0" textAlignment="right" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="kd4-pH-jau">
                                                     <rect key="frame" x="43" y="16" width="310" height="68"/>
                                                     <constraints>
                                                         <constraint firstAttribute="width" constant="310" id="gyG-GS-AJj"/>
@@ -176,19 +176,35 @@
                                     <outlet property="delegate" destination="LVz-g6-iQ4" id="rU5-Sh-ju9"/>
                                 </connections>
                             </tableView>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="DhN-dU-zka">
+                                <rect key="frame" x="0.0" y="499" width="393" height="50"/>
+                                <color key="backgroundColor" systemColor="systemCyanColor"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="50" id="CLy-Fr-e33"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="30"/>
+                                <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
+                                <state key="normal" title="保存">
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                </state>
+                            </button>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="WM1-HN-d8u"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         <constraints>
+                            <constraint firstItem="DhN-dU-zka" firstAttribute="leading" secondItem="WM1-HN-d8u" secondAttribute="leading" id="GQp-j7-NqV"/>
                             <constraint firstItem="WM1-HN-d8u" firstAttribute="trailing" secondItem="jxL-Ja-pM4" secondAttribute="trailing" id="HHQ-yV-FSE"/>
-                            <constraint firstItem="jxL-Ja-pM4" firstAttribute="bottom" secondItem="WM1-HN-d8u" secondAttribute="bottom" constant="-230" id="ccM-jg-Ssh"/>
+                            <constraint firstItem="WM1-HN-d8u" firstAttribute="trailing" secondItem="DhN-dU-zka" secondAttribute="trailing" id="Ign-hK-lOo"/>
+                            <constraint firstItem="jxL-Ja-pM4" firstAttribute="bottom" secondItem="WM1-HN-d8u" secondAttribute="bottom" constant="-270" id="ccM-jg-Ssh"/>
                             <constraint firstItem="jxL-Ja-pM4" firstAttribute="top" secondItem="6gP-3I-9Iw" secondAttribute="top" id="cgS-eX-JIj"/>
                             <constraint firstItem="jxL-Ja-pM4" firstAttribute="leading" secondItem="WM1-HN-d8u" secondAttribute="leading" id="jxl-c1-Yry"/>
+                            <constraint firstItem="DhN-dU-zka" firstAttribute="top" secondItem="jxL-Ja-pM4" secondAttribute="bottom" id="v87-Lj-sJt"/>
                         </constraints>
                     </view>
                     <tabBarItem key="tabBarItem" title="記録" image="pencil" catalog="system" id="njW-Ms-FR9"/>
                     <navigationItem key="navigationItem" id="2ZP-fm-lf8"/>
                     <connections>
+                        <outlet property="saveButton" destination="DhN-dU-zka" id="lOD-Vx-zkI"/>
                         <outlet property="tableView" destination="jxL-Ja-pM4" id="it6-R7-Qnp"/>
                     </connections>
                 </viewController>
@@ -419,6 +435,9 @@
         <image name="yensign.circle" catalog="system" width="128" height="123"/>
         <systemColor name="systemBackgroundColor">
             <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+        <systemColor name="systemCyanColor">
+            <color red="0.19607843137254902" green="0.67843137254901964" blue="0.90196078431372551" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </systemColor>
     </resources>
 </document>

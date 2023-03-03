@@ -13,12 +13,13 @@ class ExpenseInputViewController: UIViewController, UITableViewDelegate, UITable
    
     // MARK: プロパティ
     @IBOutlet weak var tableView: UITableView!
+    @IBOutlet weak var saveButton: UIButton!
     var moneyTableViewCell: MoneyTableViewCell!
     var categoryTableViewCell: CategoryTableViewCell!
     var dateTableViewCell: DateTableViewCell!
     var memoTableViewCell: MemoTableViewCell!
     
-    var moneyText = "¥0"
+    var moneyText = "0"
     var categoryText = "未入力"
     var categoryImage = UIImage(systemName: "tag")
     var dateImage = UIImage(systemName: "calendar.circle")
@@ -26,6 +27,7 @@ class ExpenseInputViewController: UIViewController, UITableViewDelegate, UITable
     var datePicker: UIDatePicker = UIDatePicker()
     var dateTextField: UITextField!
     var moneyTextField: UITextField!
+    var memoTextField: UITextField!
     
     private let disposeBag = DisposeBag()
     
@@ -69,6 +71,19 @@ class ExpenseInputViewController: UIViewController, UITableViewDelegate, UITable
         datePicker.addTarget(self, action: #selector(changeDatePicker), for: .valueChanged)
     }
     
+    func createMemoToolBar() -> UIToolbar {
+        let dateToolBar = UIToolbar(frame: CGRect(x: 0, y: 0, width: view.frame.width, height: 40))
+        let spacerItem = UIBarButtonItem(barButtonSystemItem: .flexibleSpace, target: self, action: nil)
+        let dateDoneItem = UIBarButtonItem(title: "決定", style: .done, target: self, action: #selector(memoSelect))
+        dateToolBar.setItems([spacerItem, dateDoneItem], animated: true)
+        
+        return dateToolBar
+    }
+    
+    @objc func memoSelect() {
+        memoTextField.endEditing(true)
+    }
+    
     func createMoneyToolBar() -> UIToolbar {
         let dateToolBar = UIToolbar(frame: CGRect(x: 0, y: 0, width: view.frame.width, height: 40))
         let spacerItem = UIBarButtonItem(barButtonSystemItem: .flexibleSpace, target: self, action: nil)
@@ -79,6 +94,9 @@ class ExpenseInputViewController: UIViewController, UITableViewDelegate, UITable
     }
     
     @objc func moneySelect() {
+        if moneyTextField.text == "" {
+            moneyTextField.text = "0"
+        }
         moneyTextField.endEditing(true)
     }
     
@@ -125,7 +143,7 @@ class ExpenseInputViewController: UIViewController, UITableViewDelegate, UITable
             let editingDidBeginObservable = cell.moneyTextField.rx.controlEvent(.editingDidBegin).asObservable()
             editingDidBeginObservable
                 .subscribe(onNext: { [weak self] in
-                    if cell.moneyTextField.text == "¥0" {
+                    if cell.moneyTextField.text == "0" {
                         cell.moneyTextField.text = ""
                     }
                     // ここにeditingDidBegin時の処理を記述する
@@ -162,6 +180,8 @@ class ExpenseInputViewController: UIViewController, UITableViewDelegate, UITable
         default:
             guard let cell = tableView.dequeueReusableCell(withIdentifier: "memoTableViewCell", for: indexPath) as? MemoTableViewCell else { return UITableViewCell() }
             cell.memoImageView?.image = memoImage
+            cell.memoTextField?.inputAccessoryView = createMemoToolBar()
+            memoTextField = cell.memoTextField
             return cell
         }
 
@@ -189,16 +209,16 @@ class ExpenseInputViewController: UIViewController, UITableViewDelegate, UITable
     
     // MARK: textField関連
     func textFieldDidBeginEditing(_ textField: UITextField) {
-            // テキストフィールドが編集され始めたら、初期値の「¥0」を削除する
-            if moneyTextField.text == "¥0" {
+            // テキストフィールドが編集され始めたら、初期値の「0」を削除する
+            if moneyTextField.text == "0" {
                 moneyTextField.text = ""
             }
         }
         
         func textFieldDidEndEditing(_ textField: UITextField) {
-            // テキストフィールドが編集が終わったら、空欄になっていたら「¥0」を再度設定する
+            // テキストフィールドが編集が終わったら、空欄になっていたら「0」を再度設定する
             if moneyTextField.text == "" {
-                moneyTextField.text = "¥0"
+                moneyTextField.text = "0"
             }
         }
 }
