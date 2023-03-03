@@ -15,6 +15,7 @@
 		3B48EC8929AA21470080F3EB /* CategoryTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3B48EC8829AA21470080F3EB /* CategoryTableViewCell.swift */; };
 		3B48EC8B29AA21CD0080F3EB /* DateTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3B48EC8A29AA21CD0080F3EB /* DateTableViewCell.swift */; };
 		3B48EC8D29AA21E40080F3EB /* MemoTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3B48EC8C29AA21E40080F3EB /* MemoTableViewCell.swift */; };
+		3B58A9FD29B20B2500AFF83A /* CategoryListTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3B58A9FC29B20B2500AFF83A /* CategoryListTableViewCell.swift */; };
 		3B963EB229A5797C00ED5046 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3B963EB129A5797C00ED5046 /* AppDelegate.swift */; };
 		3B963EB429A5797C00ED5046 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3B963EB329A5797C00ED5046 /* SceneDelegate.swift */; };
 		3B963EB629A5797C00ED5046 /* HomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3B963EB529A5797C00ED5046 /* HomeViewController.swift */; };
@@ -57,6 +58,7 @@
 		3B48EC8829AA21470080F3EB /* CategoryTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CategoryTableViewCell.swift; sourceTree = "<group>"; };
 		3B48EC8A29AA21CD0080F3EB /* DateTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DateTableViewCell.swift; sourceTree = "<group>"; };
 		3B48EC8C29AA21E40080F3EB /* MemoTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MemoTableViewCell.swift; sourceTree = "<group>"; };
+		3B58A9FC29B20B2500AFF83A /* CategoryListTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CategoryListTableViewCell.swift; sourceTree = "<group>"; };
 		3B963EAE29A5797C00ED5046 /* simpleMoneyDiary.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = simpleMoneyDiary.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		3B963EB129A5797C00ED5046 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		3B963EB329A5797C00ED5046 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -226,6 +228,7 @@
 				3B48EC8829AA21470080F3EB /* CategoryTableViewCell.swift */,
 				3B48EC8A29AA21CD0080F3EB /* DateTableViewCell.swift */,
 				3B48EC8C29AA21E40080F3EB /* MemoTableViewCell.swift */,
+				3B58A9FC29B20B2500AFF83A /* CategoryListTableViewCell.swift */,
 			);
 			path = TableView;
 			sourceTree = "<group>";
@@ -503,6 +506,7 @@
 				3B48EC8D29AA21E40080F3EB /* MemoTableViewCell.swift in Sources */,
 				3B963EB629A5797C00ED5046 /* HomeViewController.swift in Sources */,
 				3B963EB229A5797C00ED5046 /* AppDelegate.swift in Sources */,
+				3B58A9FD29B20B2500AFF83A /* CategoryListTableViewCell.swift in Sources */,
 				3B963EB429A5797C00ED5046 /* SceneDelegate.swift in Sources */,
 				3B48EC8929AA21470080F3EB /* CategoryTableViewCell.swift in Sources */,
 			);
