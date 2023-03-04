@@ -16,6 +16,7 @@
 		3B48EC8B29AA21CD0080F3EB /* DateTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3B48EC8A29AA21CD0080F3EB /* DateTableViewCell.swift */; };
 		3B48EC8D29AA21E40080F3EB /* MemoTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3B48EC8C29AA21E40080F3EB /* MemoTableViewCell.swift */; };
 		3B58A9FD29B20B2500AFF83A /* CategoryListTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3B58A9FC29B20B2500AFF83A /* CategoryListTableViewCell.swift */; };
+		3B58AA0129B23FE100AFF83A /* Expense.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3B58AA0029B23FE100AFF83A /* Expense.swift */; };
 		3B963EB229A5797C00ED5046 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3B963EB129A5797C00ED5046 /* AppDelegate.swift */; };
 		3B963EB429A5797C00ED5046 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3B963EB329A5797C00ED5046 /* SceneDelegate.swift */; };
 		3B963EB629A5797C00ED5046 /* HomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3B963EB529A5797C00ED5046 /* HomeViewController.swift */; };
@@ -52,13 +53,14 @@
 /* Begin PBXFileReference section */
 		24DF43D4E2E37013BAB9A0E0 /* Pods-simpleMoneyDiaryTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-simpleMoneyDiaryTests.release.xcconfig"; path = "Target Support Files/Pods-simpleMoneyDiaryTests/Pods-simpleMoneyDiaryTests.release.xcconfig"; sourceTree = "<group>"; };
 		3367A419C93132F0FF09234B /* Pods-simpleMoneyDiary-simpleMoneyDiaryUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-simpleMoneyDiary-simpleMoneyDiaryUITests.debug.xcconfig"; path = "Target Support Files/Pods-simpleMoneyDiary-simpleMoneyDiaryUITests/Pods-simpleMoneyDiary-simpleMoneyDiaryUITests.debug.xcconfig"; sourceTree = "<group>"; };
-		3B366EDC29AE112400E140A7 /* AppDate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = AppDate.swift; path = simpleMoneyDiary/AppDate.swift; sourceTree = SOURCE_ROOT; };
-		3B366EDE29AE115600E140A7 /* messageAlert.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = messageAlert.swift; path = simpleMoneyDiary/messageAlert.swift; sourceTree = SOURCE_ROOT; };
+		3B366EDC29AE112400E140A7 /* AppDate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = AppDate.swift; path = simpleMoneyDiary/Util/AppDate.swift; sourceTree = SOURCE_ROOT; };
+		3B366EDE29AE115600E140A7 /* messageAlert.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = messageAlert.swift; path = simpleMoneyDiary/Util/messageAlert.swift; sourceTree = SOURCE_ROOT; };
 		3B366EE029AEBB4E00E140A7 /* CategoryListViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CategoryListViewController.swift; sourceTree = "<group>"; };
 		3B48EC8829AA21470080F3EB /* CategoryTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CategoryTableViewCell.swift; sourceTree = "<group>"; };
 		3B48EC8A29AA21CD0080F3EB /* DateTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DateTableViewCell.swift; sourceTree = "<group>"; };
 		3B48EC8C29AA21E40080F3EB /* MemoTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MemoTableViewCell.swift; sourceTree = "<group>"; };
 		3B58A9FC29B20B2500AFF83A /* CategoryListTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CategoryListTableViewCell.swift; sourceTree = "<group>"; };
+		3B58AA0029B23FE100AFF83A /* Expense.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Expense.swift; sourceTree = "<group>"; };
 		3B963EAE29A5797C00ED5046 /* simpleMoneyDiary.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = simpleMoneyDiary.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		3B963EB129A5797C00ED5046 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		3B963EB329A5797C00ED5046 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -113,6 +115,37 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		3B58A9FE29B23F9600AFF83A /* Util */ = {
+			isa = PBXGroup;
+			children = (
+				3B366EDC29AE112400E140A7 /* AppDate.swift */,
+				3B366EDE29AE115600E140A7 /* messageAlert.swift */,
+			);
+			path = Util;
+			sourceTree = "<group>";
+		};
+		3B58A9FF29B23FC200AFF83A /* Common */ = {
+			isa = PBXGroup;
+			children = (
+				3B58AA0029B23FE100AFF83A /* Expense.swift */,
+			);
+			path = Common;
+			sourceTree = "<group>";
+		};
+		3B58AA0229B2405500AFF83A /* Model */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		3B58AA0329B2405C00AFF83A /* ViewModel */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = ViewModel;
+			sourceTree = "<group>";
+		};
 		3B963EA529A5797C00ED5046 = {
 			isa = PBXGroup;
 			children = (
@@ -138,11 +171,11 @@
 		3B963EB029A5797C00ED5046 /* simpleMoneyDiary */ = {
 			isa = PBXGroup;
 			children = (
-				3BC8F5EB29A7032A00C855C2 /* Common */,
-				3BC8F5EA29A7032000C855C2 /* Util */,
+				3B58AA0329B2405C00AFF83A /* ViewModel */,
+				3B58AA0229B2405500AFF83A /* Model */,
+				3B58A9FF29B23FC200AFF83A /* Common */,
+				3B58A9FE29B23F9600AFF83A /* Util */,
 				3BC8F5E929A7031000C855C2 /* View */,
-				3BC8F5E729A702F400C855C2 /* Model */,
-				3BC8F5E629A702E600C855C2 /* ViewModel */,
 				3BC8F5E529A702B300C855C2 /* ViewController */,
 				3B963EB129A5797C00ED5046 /* AppDelegate.swift */,
 				3B963EB329A5797C00ED5046 /* SceneDelegate.swift */,
@@ -183,42 +216,12 @@
 			path = ViewController;
 			sourceTree = "<group>";
 		};
-		3BC8F5E629A702E600C855C2 /* ViewModel */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			path = ViewModel;
-			sourceTree = "<group>";
-		};
-		3BC8F5E729A702F400C855C2 /* Model */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			path = Model;
-			sourceTree = "<group>";
-		};
 		3BC8F5E929A7031000C855C2 /* View */ = {
 			isa = PBXGroup;
 			children = (
 				3BC8F5F229A9A5C100C855C2 /* TableView */,
 			);
 			path = View;
-			sourceTree = "<group>";
-		};
-		3BC8F5EA29A7032000C855C2 /* Util */ = {
-			isa = PBXGroup;
-			children = (
-				3B366EDC29AE112400E140A7 /* AppDate.swift */,
-				3B366EDE29AE115600E140A7 /* messageAlert.swift */,
-			);
-			path = Util;
-			sourceTree = "<group>";
-		};
-		3BC8F5EB29A7032A00C855C2 /* Common */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			path = Common;
 			sourceTree = "<group>";
 		};
 		3BC8F5F229A9A5C100C855C2 /* TableView */ = {
@@ -504,6 +507,7 @@
 				3BC8F5F429A9A60600C855C2 /* MoneyTableViewCell.swift in Sources */,
 				3B366EDF29AE115600E140A7 /* messageAlert.swift in Sources */,
 				3B48EC8D29AA21E40080F3EB /* MemoTableViewCell.swift in Sources */,
+				3B58AA0129B23FE100AFF83A /* Expense.swift in Sources */,
 				3B963EB629A5797C00ED5046 /* HomeViewController.swift in Sources */,
 				3B963EB229A5797C00ED5046 /* AppDelegate.swift in Sources */,
 				3B58A9FD29B20B2500AFF83A /* CategoryListTableViewCell.swift in Sources */,
