@@ -293,8 +293,22 @@
                     <view key="view" contentMode="scaleToFill" id="A34-i7-mCG">
                         <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="5cu-rn-evL" customClass="FSCalendar">
+                                <rect key="frame" x="10" y="103" width="373" height="350"/>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="350" id="SEU-3Q-th4"/>
+                                </constraints>
+                            </view>
+                        </subviews>
                         <viewLayoutGuide key="safeArea" id="AeL-vR-Rhr"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="AeL-vR-Rhr" firstAttribute="trailing" secondItem="5cu-rn-evL" secondAttribute="trailing" constant="10" id="TXa-dx-mai"/>
+                            <constraint firstItem="5cu-rn-evL" firstAttribute="leading" secondItem="AeL-vR-Rhr" secondAttribute="leading" constant="10" id="Wab-gR-wi9"/>
+                            <constraint firstItem="5cu-rn-evL" firstAttribute="top" secondItem="AeL-vR-Rhr" secondAttribute="top" id="j9e-gJ-pFF"/>
+                        </constraints>
                     </view>
                     <tabBarItem key="tabBarItem" title="履歴" image="calendar" catalog="system" id="80h-Mx-xkX"/>
                     <navigationItem key="navigationItem" id="sDo-Qj-h9R"/>
