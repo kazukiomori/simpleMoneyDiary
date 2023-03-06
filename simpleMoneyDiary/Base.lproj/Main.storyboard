@@ -313,6 +313,9 @@
                     <tabBarItem key="tabBarItem" title="履歴" image="calendar" catalog="system" id="80h-Mx-xkX"/>
                     <navigationItem key="navigationItem" id="sDo-Qj-h9R"/>
                     <simulatedTabBarMetrics key="simulatedBottomBarMetrics"/>
+                    <connections>
+                        <outlet property="calendar" destination="5cu-rn-evL" id="B2S-8S-aT6"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="OxH-RJ-MKe" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
