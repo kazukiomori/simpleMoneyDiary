@@ -25,6 +25,7 @@ class CalendarViewController: UIViewController, FSCalendarDelegate, FSCalendarDa
         super.viewDidLoad()
         calendar.delegate = self
         calendar.dataSource = self
+        navigationItem.title = "カレンダー"
     }
     
     // 祝日判定を行い結果を返すメソッド(True:祝日)

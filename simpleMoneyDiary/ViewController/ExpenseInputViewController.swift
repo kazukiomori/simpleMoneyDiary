@@ -56,7 +56,7 @@ class ExpenseInputViewController: UIViewController, UITableViewDelegate, UITable
         let addBarButtonItem = UIBarButtonItem(title: "保存", style: .done, target: self, action: #selector(addButtonTapped))
         addBarButtonItem.tintColor = .black
         self.navigationItem.rightBarButtonItems = [addBarButtonItem]
-        navigationItem.title = "入力"
+        navigationItem.title = "支出入力"
     }
     
     func datePickerSet() {

@@ -286,7 +286,7 @@
             </objects>
             <point key="canvasLocation" x="1629.7709923664122" y="1632.3943661971832"/>
         </scene>
-        <!--履歴-->
+        <!--カレンダー-->
         <scene sceneID="rTf-9l-3hk">
             <objects>
                 <viewController id="iEZ-Ge-YIx" customClass="CalendarViewController" customModule="simpleMoneyDiary" customModuleProvider="target" sceneMemberID="viewController">
@@ -310,7 +310,7 @@
                             <constraint firstItem="5cu-rn-evL" firstAttribute="top" secondItem="AeL-vR-Rhr" secondAttribute="top" id="j9e-gJ-pFF"/>
                         </constraints>
                     </view>
-                    <tabBarItem key="tabBarItem" title="履歴" image="calendar" catalog="system" id="80h-Mx-xkX"/>
+                    <tabBarItem key="tabBarItem" title="カレンダー" image="calendar" catalog="system" id="80h-Mx-xkX"/>
                     <navigationItem key="navigationItem" id="sDo-Qj-h9R"/>
                     <simulatedTabBarMetrics key="simulatedBottomBarMetrics"/>
                     <connections>

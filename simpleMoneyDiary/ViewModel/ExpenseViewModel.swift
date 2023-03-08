@@ -26,7 +26,7 @@ class ExpenseViewModel {
         return expenseList
     }
     
-    func fetchTheDayData(date: String) -> [Expense] {
+    func fetchTheDayData(date: Date) -> [Expense] {
         var expenseList: [Expense] = []
         let results = model.getTheDayData(date: date)
         for result in results {
@@ -41,7 +41,7 @@ class ExpenseViewModel {
     }
     
     // viewで入力した値をFoodList型の変数にまとめて、FoodListModelでrealmに保存する
-    func addData(money: Int, category: String, date: String, memo: String){
+    func addData(money: Int, category: String, date: Date, memo: String){
         let expense = Expense()
         expense.money = money
         expense.category = category

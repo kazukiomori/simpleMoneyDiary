@@ -25,7 +25,7 @@ class ExpenseModel {
         return results
     }
     
-    func getTheDayData(date: String) -> Results<Expense> {
+    func getTheDayData(date: Date) -> Results<Expense> {
         let realm = try! Realm()
         var results: Results<Expense>
         results = realm.objects(Expense.self).where{($0.date == date)}
