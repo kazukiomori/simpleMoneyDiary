@@ -12,6 +12,6 @@ import RealmSwift
 class Expense: Object {
     @objc dynamic var money: Int = 0
     @objc dynamic var category: String = ""
-    @objc dynamic var date: Date = NSDate() as Date
+    @objc dynamic var date: String = ""
     @objc dynamic var memo: String = ""
 }
