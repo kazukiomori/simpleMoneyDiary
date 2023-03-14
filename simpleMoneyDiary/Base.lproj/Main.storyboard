@@ -309,12 +309,18 @@
                             <constraint firstItem="5cu-rn-evL" firstAttribute="leading" secondItem="AeL-vR-Rhr" secondAttribute="leading" constant="10" id="Wab-gR-wi9"/>
                             <constraint firstItem="5cu-rn-evL" firstAttribute="top" secondItem="AeL-vR-Rhr" secondAttribute="top" id="j9e-gJ-pFF"/>
                         </constraints>
+                        <userDefinedRuntimeAttributes>
+                            <userDefinedRuntimeAttribute type="color" keyPath="layer.colors">
+                                <color key="value" systemColor="systemTealColor"/>
+                            </userDefinedRuntimeAttribute>
+                        </userDefinedRuntimeAttributes>
                     </view>
                     <tabBarItem key="tabBarItem" title="カレンダー" image="calendar" catalog="system" id="80h-Mx-xkX"/>
                     <navigationItem key="navigationItem" id="sDo-Qj-h9R"/>
                     <simulatedTabBarMetrics key="simulatedBottomBarMetrics"/>
                     <connections>
                         <outlet property="calendar" destination="5cu-rn-evL" id="B2S-8S-aT6"/>
+                        <outlet property="calendarView" destination="A34-i7-mCG" id="epK-xw-Rud"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="OxH-RJ-MKe" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
@@ -414,15 +420,58 @@
                     <view key="view" contentMode="scaleToFill" id="pAh-qG-do5">
                         <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="dmX-Bg-OB8">
+                                <rect key="frame" x="0.0" y="103" width="393" height="666"/>
+                                <subviews>
+                                    <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" ambiguous="YES" translatesAutoresizingMaskIntoConstraints="NO" id="6qy-RL-Hkr">
+                                        <rect key="frame" x="0.0" y="65" width="393" height="300"/>
+                                        <subviews>
+                                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="BCE-aJ-Fgm">
+                                                <rect key="frame" x="0.0" y="0.0" width="393" height="350"/>
+                                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="height" constant="350" id="IF9-uO-Mx0"/>
+                                                </constraints>
+                                            </view>
+                                        </subviews>
+                                        <constraints>
+                                            <constraint firstItem="BCE-aJ-Fgm" firstAttribute="width" secondItem="6qy-RL-Hkr" secondAttribute="width" id="0F3-5z-1hk"/>
+                                            <constraint firstItem="BCE-aJ-Fgm" firstAttribute="top" secondItem="6qy-RL-Hkr" secondAttribute="top" id="9gx-0w-3Ad"/>
+                                            <constraint firstAttribute="trailing" secondItem="BCE-aJ-Fgm" secondAttribute="trailing" id="OMU-br-GLf"/>
+                                            <constraint firstAttribute="bottom" secondItem="BCE-aJ-Fgm" secondAttribute="bottom" id="wBq-K6-MQh"/>
+                                            <constraint firstItem="BCE-aJ-Fgm" firstAttribute="leading" secondItem="6qy-RL-Hkr" secondAttribute="leading" id="zdK-hF-BRE"/>
+                                        </constraints>
+                                        <viewLayoutGuide key="contentLayoutGuide" id="TVF-dS-Nfw"/>
+                                        <viewLayoutGuide key="frameLayoutGuide" id="cPM-En-tB9"/>
+                                    </scrollView>
+                                </subviews>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                <constraints>
+                                    <constraint firstItem="6qy-RL-Hkr" firstAttribute="top" secondItem="dmX-Bg-OB8" secondAttribute="top" constant="65" id="Lt6-pT-KqS"/>
+                                    <constraint firstAttribute="trailing" secondItem="6qy-RL-Hkr" secondAttribute="trailing" id="O4J-tB-7Jg"/>
+                                    <constraint firstItem="6qy-RL-Hkr" firstAttribute="leading" secondItem="dmX-Bg-OB8" secondAttribute="leading" id="tdz-Gy-yFo"/>
+                                </constraints>
+                            </view>
+                        </subviews>
                         <viewLayoutGuide key="safeArea" id="BjJ-7c-tAW"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="dmX-Bg-OB8" firstAttribute="top" secondItem="BjJ-7c-tAW" secondAttribute="top" id="QM8-vk-uoN"/>
+                            <constraint firstItem="BjJ-7c-tAW" firstAttribute="bottom" secondItem="dmX-Bg-OB8" secondAttribute="bottom" id="cat-gO-DyV"/>
+                            <constraint firstItem="dmX-Bg-OB8" firstAttribute="leading" secondItem="BjJ-7c-tAW" secondAttribute="leading" id="khl-0H-1BF"/>
+                            <constraint firstItem="BjJ-7c-tAW" firstAttribute="trailing" secondItem="dmX-Bg-OB8" secondAttribute="trailing" id="lHA-Ep-GGO"/>
+                        </constraints>
                     </view>
                     <tabBarItem key="tabBarItem" title="ホーム" image="house" catalog="system" id="j2e-PO-wix"/>
                     <navigationItem key="navigationItem" id="aNm-07-1k9"/>
+                    <connections>
+                        <outlet property="homeView" destination="dmX-Bg-OB8" id="oyj-wv-Q9I"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="p9J-fd-rKc" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="459" y="902"/>
+            <point key="canvasLocation" x="458.77862595419845" y="901.4084507042254"/>
         </scene>
         <!--Tab Bar Controller-->
         <scene sceneID="xWX-bc-vFX">
@@ -455,6 +504,9 @@
         </systemColor>
         <systemColor name="systemCyanColor">
             <color red="0.19607843137254902" green="0.67843137254901964" blue="0.90196078431372551" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </systemColor>
+        <systemColor name="systemTealColor">
+            <color red="0.18823529411764706" green="0.69019607843137254" blue="0.7803921568627451" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </systemColor>
     </resources>
 </document>

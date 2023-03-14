@@ -10,6 +10,7 @@ import FSCalendar
 import CalculateCalendarLogic
 
 class CalendarViewController: UIViewController, FSCalendarDelegate, FSCalendarDataSource, FSCalendarDelegateAppearance {
+    @IBOutlet var calendarView: UIView!
     
     @IBOutlet weak var calendar: FSCalendar!
     
@@ -26,6 +27,17 @@ class CalendarViewController: UIViewController, FSCalendarDelegate, FSCalendarDa
         calendar.delegate = self
         calendar.dataSource = self
         navigationItem.title = "カレンダー"
+        setBackGroundColor(firstColor: .red, secondColor: .blue)
+    }
+    
+    func setBackGroundColor(firstColor: UIColor, secondColor: UIColor) {
+        // グラデーションレイヤーを作成
+        let gradientLayer = CAGradientLayer()
+        gradientLayer.frame = calendarView.bounds // View全体にグラデーションを設定する
+        gradientLayer.colors = [firstColor, secondColor] // グラデーションの開始色と終了色を設定
+        
+        // グラデーションレイヤーをViewの背景色として設定
+        calendarView.layer.insertSublayer(gradientLayer, at: 0)
     }
     
     // 祝日判定を行い結果を返すメソッド(True:祝日)
